@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* .p{
+            font-size: 15px;
+        } */
+    </style>
+  </head>
+  <body>
+    <p class="p" style="font-size: 50px">Hello</p>
+
+    <button type="button" onclick="increse()">increse</button>
+    <button type="button" onclick="decrese()">decrese</button>
+    <button type="button" onclick="stop()">Stop</button>
+
+    <script>
+      // ini. two var. & incre. both the var each time & display addition of both var. in every 1 sec
+      /*
+        let a = 2 
+        let b = 13
+
+        setInterval( ( ) => {
+            document.querySelector(".p").innerText = a + b 
+            b = a + b
+        } , 1000 )
+         */
+
+      // write code to incre. font size at interval of 50 mil. sec & it should stop incre when font size reach to 50 px default size = 15 px
+      /*
+        font = 15;
+        size = document.querySelector(".p")
+        function fun(font){
+            size.style.fontSize = font + "px"
+        }
+
+         function incre1() {
+            size = document.querySelector(".p")
+            setInterval( ( ) => {
+                if (font <= 50) {
+                    fun(font++)
+                }
+            } , 50 )
+         } */
+
+      // write code to do this
+      // 1. add 3 buttons  (incre , decre , stop)
+      // 2.  for incre -> max font size 200px
+      // 3. decre. -> min font size 20px
+      // 4. default font size = 50px
+      // 5. stop button to stop incre or decre font
+      // interval 100 mil sec
+
+      font = 50;
+      size = document.querySelector(".p");
+
+      function incre_font(font) {
+        size.style.fontSize = font + "px";
+      }
+
+      function increse() {
+        test = setInterval(() => {
+          if (font < 200) {
+            incre_font(font++);
+          }
+        }, 100);
+      }
+
+      function decre_font(font) {
+        size.style.fontSize = font + "px";
+      }
+
+      function decrese() {
+        test = setInterval(() => {
+          if (font > 20) {
+            decre_font(font--);
+          }
+        }, 100);
+      }
+
+      function stop() {
+        clearInterval(test);
+      }
+    </script>
+  </body>
+</html>
