@@ -1,10 +1,10 @@
 const url = require("url")
 const fs = require("fs")
 
-
 var attr = 'http://localhost:3001/default.html?year=2026&month=march'
 
 var q = url.parse(attr,true) // if i write true here then it give query in object formate but if i don't so it give quary in string formate
+process.noDeprecation = true // to remove error msg
 console.log(q)
 /*
 this is value of q --> Url {

@@ -4,7 +4,7 @@
   "description": "this is just for test",
   "license": "ISC",
   "author": "ved patel",
-  "type": "module",
+  "type": "commonjs",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

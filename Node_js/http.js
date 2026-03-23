@@ -1,7 +1,7 @@
 const http = require("http")
 const fs = require("fs")
 const url = require("url");
-fs.writeFile
+
 /*
 const server = http.createServer( (req,res) => {
     res.setHeader('Content-Type' , 'text/html')
