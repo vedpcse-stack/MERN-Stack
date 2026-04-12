@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "this is express",
   "license": "ISC",
-  "author": "",
+  "author": "ved",
   "type": "commonjs",
   "main": "e1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon e1.js"
+    "start": "nodemon e3.js",
+    "faaaa": "nodemon e1.js"
   },
   "dependencies": {
     "express": "^5.2.1",

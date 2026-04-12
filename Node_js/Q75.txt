@@ -1,3 +1,0 @@
-1 6 2 9 4
-Sorted array : 9,6,4,2,1
-maximum number : 9
