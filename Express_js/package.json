@@ -8,10 +8,11 @@
   "main": "e1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon e3.js",
+    "start": "nodemon app.js",
     "faaaa": "nodemon e1.js"
   },
   "dependencies": {
+    "ejs": "^5.0.2",
     "express": "^5.2.1",
     "nodemon": "^3.1.14"
   }

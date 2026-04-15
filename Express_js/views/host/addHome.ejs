@@ -1,0 +1,49 @@
+<%- include('../partials/head') %>
+<style>
+  .form-control {
+    margin-bottom: 10px;
+  }
+  form{
+    margin-top: 200px;
+    margin-left: 300px;
+    font-size: 30px;
+  }
+
+  #homeName, #city, #perNightPrice, #rating {
+    padding: 10px;
+    font-size: 20px;
+    width: 300px;
+  }
+
+  label{
+    margin-right: 40px;
+  }
+</style>
+</head>
+<body>
+    
+<form action="/host/add-home" method="POST">
+  <div class="form-control">
+    <label for="homeName">Home Name : </label>
+    <input type="text" name="homeName" id="homeName" required>
+  </div>
+  <div class="form-control">
+    <label for="city">City : </label>
+    <input type="text" name="city" id="city" required>
+  </div>
+  <div class="form-control">
+    <label for="perNightPrice">Price per Night : </label>
+    <input type="number" name="perNightPrice" id="perNightPrice" step="0.01" min="0" required>
+  </div>
+  <div class="form-control">
+    <label for="rating">Rating (1-5) : </label>
+    <input type="number" name="rating" id="rating" min="1" max="5" required>
+  </div>
+
+  
+
+  <button type="submit">Add Home</button>
+</form>
+
+</body>
+</html>
