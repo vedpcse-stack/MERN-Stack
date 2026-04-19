@@ -20,6 +20,7 @@ module.exports = class Home {
   }
 
   save() {
+    this.id = Math.random().toString()
     Home.fatchAll((homeNames) => {
       homeNames.push(this);
       const filePath = path.join(rootDir, "data", "homes.json");
@@ -39,4 +40,18 @@ module.exports = class Home {
       }
     });
   }
+
+  static fatchHomeById(id , callback) {
+    const filePath = path.join(rootDir, "data", "homes.json");
+    fs.readFile(filePath, (err, data) => {
+      if (err) {
+        callback([]);
+      } else { 
+        let homeData = JSON.parse(data).find(home => home.id == id)
+        // console.log(homeData)
+        callback([homeData]);
+      }
+    });
+  }
+
 };

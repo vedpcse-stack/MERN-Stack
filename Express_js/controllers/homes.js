@@ -22,3 +22,11 @@ exports.postAddHome = (req, res) => {
   home.save();
   res.render("host/homeAdded", { pageTitle: "home added" });
 };
+
+exports.getHomeDetails = (req , res) => {
+  id = req.params.homeId
+  Home.fatchHomeById(id , (home) => {
+    res.render("store/homeDetails" , {pageTitle : "home details" , registeredHome : home})
+  })
+  
+}

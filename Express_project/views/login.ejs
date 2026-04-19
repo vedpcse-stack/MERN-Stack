@@ -1,0 +1,13 @@
+<%- include('partials/head') %>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <h1>Welcome To Express Note Taking App</h1>
+
+    <form action="/note/dashboard" method="POST">
+        <input type="text" placeholder="username" class="name" name="username" required >
+        <input type="submit" class="btn" value="Login">
+    </form>
+</body>
+</html>

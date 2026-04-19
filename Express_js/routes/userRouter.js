@@ -5,4 +5,6 @@ const homeController = require('../controllers/homes')
 
 userRouter.get("/" ,homeController.getHome )
 
+userRouter.get("/homes/:homeId" , homeController.getHomeDetails)
+
 exports.userRouter = userRouter

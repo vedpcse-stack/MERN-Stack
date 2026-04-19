@@ -40,6 +40,7 @@
                         <p><strong>City:</strong> <%= home.city %></p>
                         <p class="rating">Rating: <%= home.rating %> ★</p>
                         <p class="price">$<%= home.perNightPrice %> / night</p>
+                        <a href="/homes/<%= home.id %>">Details</a>
                     </div>
                 <% }) %>
             <% } else { %>

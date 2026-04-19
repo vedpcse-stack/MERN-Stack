@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkblue;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2{
+    width: 40%;
+    height: 40px;
+    color: white;
+    font-size: 40px;
+}
+
+
+

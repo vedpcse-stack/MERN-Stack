@@ -1,0 +1,47 @@
+<%- include('../partials/head') %>
+<style>
+.link{
+    font-size: 20px;
+    text-decoration: none;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+.card{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 300px;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Airbnb Clone</h1>
+    </header>
+    <main>
+        <h1>Your home details : </h1>
+        <div class="card-container">
+            <% if (registeredHome.length > 0) { %>
+                <% registeredHome.forEach(home => { %>
+                    <div class="card">
+                        <h2> <b>--</b>  <%= home.name %></h2>
+                        <p><strong>City:</strong> <%= home.city %></p>
+                        <p class="rating">Rating: <%= home.rating %> ★</p>
+                        <p class="price">$<%= home.perNightPrice %> / night</p>
+                        <a href="/homes/<%= home.id %>">Details</a>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <h2>No homes registered yet!</h2>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>
