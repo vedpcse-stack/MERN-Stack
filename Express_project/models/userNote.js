@@ -42,4 +42,27 @@ module.exports = class Note {
             }
         });
     }
+
+    static fatchByID(id ,name ,  callback) {
+        const filePath = path.join(rootDir, "data", "notes.json");
+        fs.readFile(filePath, "utf-8", (err, data) => {
+            if (err) {
+                callback({});
+            } else {
+                if (!name) {
+                    console.log("no name")
+                    return;
+                }
+                let notes = JSON.parse(data)
+                console.log(notes[name])
+                let note = notes[name].filter((note) => {
+                    if (note.id == id) {
+                        return note;
+                    }
+                })
+                console.log(note)
+                callback(note)
+            }
+        });
+    }
 }
